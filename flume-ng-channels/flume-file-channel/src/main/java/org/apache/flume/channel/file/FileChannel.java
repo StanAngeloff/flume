@@ -30,6 +30,7 @@ import org.apache.flume.Channel;
 import org.apache.flume.ChannelException;
 import org.apache.flume.Context;
 import org.apache.flume.Event;
+import org.apache.flume.annotations.Disposable;
 import org.apache.flume.channel.BasicChannelSemantics;
 import org.apache.flume.channel.BasicTransactionSemantics;
 import org.apache.flume.channel.file.Log.Builder;
@@ -54,6 +55,7 @@ import com.google.common.base.Strings;
  * the transaction is synced to disk.
  * </p>
  */
+@Disposable
 public class FileChannel extends BasicChannelSemantics {
 
   private static final Logger LOG = LoggerFactory
